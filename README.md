@@ -24,6 +24,27 @@ func main() {}
 
 By default it look at the file **banner.txt** in the same directory. You can customize with the command line flags.
 
+If you do not want to use the autoload package you can always fallback to the banner API
+
+```go
+package main
+
+import (
+	"bytes"
+	"os"
+
+	"github.com/dimiro1/banner"
+)
+
+func main() {
+  // This first parameter is the output
+  // The second is a flag telling that banner is enabled
+  // The third parameter is your custom banner 
+  banner.Init(os.Stdout, true, bytes.NewBufferString("My Custom Banner"))
+}
+
+```
+
 # API
 
 The public API is composed of two things, the method **banner.Init** and the command line flags in autoload. I do not have any plans to break compatibility, but I recommend you to vendor this dependency in your project, as it is a good practice.
