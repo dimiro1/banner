@@ -45,16 +45,21 @@ func SetLog(l *log.Logger) {
 
 // Init load the banner and prints it to output
 // All errors are ignored, the application will not print the banner in case of error.
-func Init(out io.Writer, isEnabled bool, filename string) {
+func Init(out io.Writer, isEnabled bool, in io.Reader) {
 	if !isEnabled {
 		logger.Println("The banner is not enabled.")
 		return
 	}
 
-	banner, err := ioutil.ReadFile(filename)
+	if in == nil {
+		logger.Println("The input is nil")
+		return
+	}
+
+	banner, err := ioutil.ReadAll(in)
 
 	if err != nil {
-		logger.Printf("Error trying to read the banner file %s, err: %v", filename, err)
+		logger.Printf("Error trying to read the banner, err: %v", err)
 		return
 	}
 

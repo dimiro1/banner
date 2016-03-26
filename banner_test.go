@@ -63,7 +63,7 @@ func Test_printBanner_invalid(t *testing.T) {
 func Test_printBanner_flags(t *testing.T) {
 	var buffer bytes.Buffer
 
-	Init(&buffer, true, "test-banner.txt")
+	Init(&buffer, true, bytes.NewBufferString("Test Banner"))
 
 	expected := "Test Banner"
 
@@ -78,10 +78,37 @@ func Test_printBanner_flags(t *testing.T) {
 	}
 }
 
-func Test_printBanner_invalid_file(t *testing.T) {
+func Test_printBanner_invalid_reader(t *testing.T) {
 	var buffer bytes.Buffer
 
-	Init(&buffer, true, "invalid.txt")
+	Init(&buffer, true, nil)
+
+	expected := ""
+
+	result, err := ioutil.ReadAll(&buffer)
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	if string(result) != expected {
+		t.Errorf("result != expected, got %s", string(result))
+	}
+}
+
+func Test_printBanner_closed_reader(t *testing.T) {
+	var buffer bytes.Buffer
+
+	// Testing an error while reading a closed file.
+	in, err := os.Open("test-banner.txt")
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	in.Close()
+
+	Init(&buffer, true, in)
 
 	expected := ""
 
@@ -99,7 +126,7 @@ func Test_printBanner_invalid_file(t *testing.T) {
 func Test_printBanner_banner_disabled(t *testing.T) {
 	var buffer bytes.Buffer
 
-	Init(&buffer, false, "test-banner.txt")
+	Init(&buffer, false, bytes.NewBufferString("Test Banner"))
 
 	expected := ""
 

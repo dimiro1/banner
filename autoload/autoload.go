@@ -24,5 +24,15 @@ func init() {
 
 	flag.Parse()
 
-	banner.Init(os.Stdout, isEnabled, filename)
+	in, err := os.Open(filename)
+
+	if in != nil {
+		defer in.Close()
+	}
+
+	if err != nil {
+		return
+	}
+
+	banner.Init(os.Stdout, isEnabled, in)
 }
