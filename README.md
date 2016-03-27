@@ -129,6 +129,8 @@ Want to see a nyancat?
 $ go run example/main.go -banner example/nyancat.txt 
 ```
 
+![NyanCat Banner](banner-nyan.png?raw=true "NyanCat Banner")
+
 ## Example
 
 ```
