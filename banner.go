@@ -47,7 +47,7 @@ func (v vars) Now(layout string) string {
 
 // Init load the banner and prints it to output
 // All errors are ignored, the application will not print the banner in case of error.
-func Init(out io.Writer, isEnabled bool, in io.Reader) {
+func Init(out io.Writer, isEnabled, isColorEnabled bool, in io.Reader) {
 	if !isEnabled {
 		logger.Println("The banner is not enabled.")
 		return
@@ -65,10 +65,10 @@ func Init(out io.Writer, isEnabled bool, in io.Reader) {
 		return
 	}
 
-	show(out, string(banner))
+	show(out, isColorEnabled, string(banner))
 }
 
-func show(out io.Writer, content string) {
+func show(out io.Writer, isColorEnabled bool, content string) {
 	t, err := template.New("banner").Parse(content)
 
 	if err != nil {
@@ -84,7 +84,7 @@ func show(out io.Writer, content string) {
 		os.Getenv("GOPATH"),
 		runtime.GOROOT(),
 		runtime.Compiler,
-		ansiColor{},
-		ansiBackground{},
+		ansiColor{isColorEnabled},
+		ansiBackground{isColorEnabled},
 	})
 }

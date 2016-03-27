@@ -29,7 +29,7 @@ func Test_printBanner(t *testing.T) {
 
 	expected := fmt.Sprintf(`Hello, %s, %s, %s, %d, %s, %s, %s`, version, goos, goarch, numCPU, gopath, goroot, compiler)
 
-	show(&buffer, bannerContent)
+	show(&buffer, true, bannerContent)
 
 	result, err := ioutil.ReadAll(&buffer)
 
@@ -47,7 +47,7 @@ func Test_printBanner_invalid(t *testing.T) {
 
 	expected := ""
 
-	show(&buffer, "{{}")
+	show(&buffer, true, "{{}")
 
 	result, err := ioutil.ReadAll(&buffer)
 
@@ -63,7 +63,7 @@ func Test_printBanner_invalid(t *testing.T) {
 func Test_printBanner_flags(t *testing.T) {
 	var buffer bytes.Buffer
 
-	Init(&buffer, true, bytes.NewBufferString("Test Banner"))
+	Init(&buffer, true, true, bytes.NewBufferString("Test Banner"))
 
 	expected := "Test Banner"
 
@@ -81,7 +81,7 @@ func Test_printBanner_flags(t *testing.T) {
 func Test_printBanner_invalid_reader(t *testing.T) {
 	var buffer bytes.Buffer
 
-	Init(&buffer, true, nil)
+	Init(&buffer, true, true, nil)
 
 	expected := ""
 
@@ -108,7 +108,7 @@ func Test_printBanner_closed_reader(t *testing.T) {
 
 	in.Close()
 
-	Init(&buffer, true, in)
+	Init(&buffer, true, true, in)
 
 	expected := ""
 
@@ -126,7 +126,7 @@ func Test_printBanner_closed_reader(t *testing.T) {
 func Test_printBanner_banner_disabled(t *testing.T) {
 	var buffer bytes.Buffer
 
-	Init(&buffer, false, bytes.NewBufferString("Test Banner"))
+	Init(&buffer, false, true, bytes.NewBufferString("Test Banner"))
 
 	expected := ""
 

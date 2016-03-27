@@ -15,12 +15,14 @@ import (
 
 func init() {
 	var (
-		filename  string
-		isEnabled bool
+		filename       string
+		isEnabled      bool
+		isColorEnabled bool
 	)
 
 	flag.StringVar(&filename, "banner", "banner.txt", "banner.txt file")
 	flag.BoolVar(&isEnabled, "show-banner", true, "print the banner?")
+	flag.BoolVar(&isColorEnabled, "ansi", true, "ansi colors enabled?")
 
 	flag.Parse()
 
@@ -34,5 +36,5 @@ func init() {
 		return
 	}
 
-	banner.Init(os.Stdout, isEnabled, in)
+	banner.Init(os.Stdout, isEnabled, isColorEnabled, in)
 }

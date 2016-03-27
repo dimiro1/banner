@@ -37,17 +37,16 @@ import (
 )
 
 func main() {
-  // This first parameter is the output
-  // The second is a flag telling that banner is enabled
-  // The third parameter is your custom banner 
-  banner.Init(os.Stdout, true, bytes.NewBufferString("My Custom Banner"))
+  isEnabled := true
+  isColorEnabled := true
+  banner.Init(os.Stdout, isEnabled, isColorEnabled, bytes.NewBufferString("My Custom Banner"))
 }
 
 ```
 
 # API
 
-The public API is composed of two things, the method **banner.Init** and the command line flags in autoload. I do not have any plans to break compatibility, but I recommend you to vendor this dependency in your project, as it is a good practice.
+I recommend you to vendor this dependency in your project, as it is a good practice.
 
 # Command line flags
 
@@ -58,6 +57,8 @@ $ go run main.go -h
 should output
 ```
 Usage of main:
+  -ansi
+    	ansi colors enabled? (default true)
   -banner string
     	banner.txt file (default "banner.txt")
   -show-banner
