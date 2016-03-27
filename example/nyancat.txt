@@ -1,0 +1,32 @@
+
+{{.AnsiColor.BrightBlue}}████████████████████████████████████████████████████████████████████████████████
+{{.AnsiColor.BrightBlue}}████████████████████████████████████████████████████████████████████████████████
+{{.AnsiColor.Red}}██████████████████{{.AnsiColor.BrightBlue}}████████████████{{.AnsiColor.Black}}██████████████████████████████{{.AnsiColor.BrightBlue}}████████████████
+{{.AnsiColor.Red}}████████████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██████████████
+{{.AnsiColor.BrightRed}}████{{.AnsiColor.Red}}██████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Magenta}}██████████████████████{{.AnsiColor.White}}██████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████████████
+{{.AnsiColor.BrightRed}}██████████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}████{{.AnsiColor.Magenta}}████████████████{{.AnsiColor.Black}}████{{.AnsiColor.Magenta}}██████{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██{{.AnsiColor.Black}}████{{.AnsiColor.BrightBlue}}██████
+{{.AnsiColor.BrightRed}}██████████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.Magenta}}██████{{.AnsiColor.White}}██{{.AnsiColor.Black}}████{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████
+{{.AnsiColor.BrightYellow}}██████████████████{{.AnsiColor.BrightRed}}████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Magenta}}██████{{.AnsiColor.White}}██{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████
+{{.AnsiColor.BrightYellow}}██████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.BrightYellow}}██████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Black}}████████{{.AnsiColor.White}}████████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████
+{{.AnsiColor.BrightYellow}}████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Black}}██{{.AnsiColor.BrightYellow}}████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████
+{{.AnsiColor.BrightGreen}}██████████████████{{.AnsiColor.BrightYellow}}██{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Black}}████████{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}██████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██
+{{.AnsiColor.BrightGreen}}██████████████████████{{.AnsiColor.White}}████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}██████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.BrightYellow}}██{{.AnsiColor.White}}██████████{{.AnsiColor.BrightYellow}}██{{.AnsiColor.Black}}██{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██
+{{.AnsiColor.BrightGreen}}██████████████████████{{.AnsiColor.Black}}████{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}██████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Black}}████{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██
+{{.AnsiColor.Blue}}██████████████████{{.AnsiColor.BrightGreen}}████████{{.AnsiColor.Black}}██████{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}██████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Magenta}}████{{.AnsiColor.White}}████████████████{{.AnsiColor.Magenta}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██
+{{.AnsiColor.Blue}}██████████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}████{{.AnsiColor.Magenta}}██████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Black}}████████████{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████
+{{.AnsiColor.BrightBlue}}██████████████████{{.AnsiColor.Blue}}████{{.AnsiColor.Blue}}██████{{.AnsiColor.Black}}████{{.AnsiColor.White}}██████{{.AnsiColor.Magenta}}██████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████████████████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██████
+{{.AnsiColor.BrightBlue}}██████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██{{.AnsiColor.Black}}████{{.AnsiColor.White}}████████████████████{{.AnsiColor.Black}}██████████████████{{.AnsiColor.BrightBlue}}████████
+{{.AnsiColor.BrightBlue}}████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}██████{{.AnsiColor.Black}}████████████████████████████████{{.AnsiColor.White}}██{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████████████
+{{.AnsiColor.BrightBlue}}████████████████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}██{{.AnsiColor.Black}}██{{.AnsiColor.White}}████{{.AnsiColor.BrightBlue}}████████████{{.AnsiColor.Black}}██{{.AnsiColor.White}}████{{.AnsiColor.Black}}████{{.AnsiColor.White}}████{{.AnsiColor.Black}}██{{.AnsiColor.BrightBlue}}████████████
+{{.AnsiColor.BrightBlue}}████████████████████████{{.AnsiColor.Black}}██████{{.AnsiColor.BrightBlue}}████{{.AnsiColor.Black}}██████{{.AnsiColor.BrightBlue}}████████████{{.AnsiColor.Black}}██████{{.AnsiColor.BrightBlue}}████{{.AnsiColor.Black}}██████{{.AnsiColor.BrightBlue}}████████████
+████████████████████████████████████████████████████████████████████████████████
+{{ .AnsiColor.Default }}
+GoVersion: {{ .GoVersion }}
+GOOS: {{ .GOOS }}
+GOARCH: {{ .GOARCH }}
+NumCPU: {{ .NumCPU }}
+GOPATH: {{ .GOPATH }}
+GOROOT: {{ .GOROOT }}
+Compiler: {{ .Compiler }}
+ENV: {{ .Env "GOPATH" }}
+Now: {{ .Now "Monday, 2 Jan 2006" }}

@@ -82,6 +82,53 @@ You can use the following variables in the template.
 
 Please see the layout of the function **.Now** in https://github.com/golang/go/blob/f06795d9b742cf3292a0f254646c23603fc6419b/src/time/format.go#L9-L41
 
+## Colors
+
+There are support for ANSI colors :)
+
+| Variable                                  |
+|-------------------------------------------|
+| ```{{ .AnsiColor.Default }}```            |
+| ```{{ .AnsiColor.Black }}```              |
+| ```{{ .AnsiColor.Red }}```                |
+| ```{{ .AnsiColor.Green }}```              |
+| ```{{ .AnsiColor.Yellow }}```             |
+| ```{{ .AnsiColor.Blue }}```               |
+| ```{{ .AnsiColor.Magenta }}```            |
+| ```{{ .AnsiColor.Cyan }}```               |
+| ```{{ .AnsiColor.White }}```              |
+| ```{{ .AnsiColor.BrightBlack }}```        |
+| ```{{ .AnsiColor.BrightRed }}```          |
+| ```{{ .AnsiColor.BrightGreen }}```        |
+| ```{{ .AnsiColor.BrightYellow }}```       |
+| ```{{ .AnsiColor.BrightBlue }}```         |
+| ```{{ .AnsiColor.BrightMagenta }}```      |
+| ```{{ .AnsiColor.BrightCyan }}```         |
+| ```{{ .AnsiColor.BrightWhite }}```        |
+| ```{{ .AnsiBackground.Default }}```       |
+| ```{{ .AnsiBackground.Black }}```         |
+| ```{{ .AnsiBackground.Red }}```           |
+| ```{{ .AnsiBackground.Green }}```         |
+| ```{{ .AnsiBackground.Yellow }}```        |
+| ```{{ .AnsiBackground.Blue }}```          |
+| ```{{ .AnsiBackground.Magenta }}```       |
+| ```{{ .AnsiBackground.Cyan }}```          |
+| ```{{ .AnsiBackground.White }}```         |
+| ```{{ .AnsiBackground.BrightBlack }}```   |
+| ```{{ .AnsiBackground.BrightRed }}```     |
+| ```{{ .AnsiBackground.BrightGreen }}```   |
+| ```{{ .AnsiBackground.BrightYellow }}```  |
+| ```{{ .AnsiBackground.BrightBlue }}```    |
+| ```{{ .AnsiBackground.BrightMagenta }}``` |
+| ```{{ .AnsiBackground.BrightCyan }}```    |
+| ```{{ .AnsiBackground.BrightWhite }}```   |
+
+Want to see a nyancat?
+
+```sh
+$ go run example/main.go -banner example/nyancat.txt 
+```
+
 ## Example
 
 ```

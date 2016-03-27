@@ -14,3 +14,5 @@ GOROOT: {{ .GOROOT }}
 Compiler: {{ .Compiler }}
 ENV: {{ .Env "GOPATH" }}
 Now: {{ .Now "Monday, 2 Jan 2006" }}
+{{ .AnsiColor.BrightGreen }}This text will appear in Green
+{{ .AnsiColor.BrightRed }}This text will appear in Red

@@ -16,14 +16,24 @@ import (
 
 var logger = log.New(os.Stderr, "", log.Ldate|log.Ltime|log.Lshortfile)
 
+// SetLog permits the user change the default logger instance
+func SetLog(l *log.Logger) {
+	if l == nil {
+		return
+	}
+	logger = l
+}
+
 type vars struct {
-	GoVersion string
-	GOOS      string
-	GOARCH    string
-	NumCPU    int
-	GOPATH    string
-	GOROOT    string
-	Compiler  string
+	GoVersion      string
+	GOOS           string
+	GOARCH         string
+	NumCPU         int
+	GOPATH         string
+	GOROOT         string
+	Compiler       string
+	AnsiColor      ansiColor
+	AnsiBackground ansiBackground
 }
 
 func (v vars) Env(env string) string {
@@ -33,14 +43,6 @@ func (v vars) Env(env string) string {
 // See https://github.com/golang/go/blob/f06795d9b742cf3292a0f254646c23603fc6419b/src/time/format.go#L9-L41
 func (v vars) Now(layout string) string {
 	return time.Now().Format(layout)
-}
-
-// SetLog permits the user change the default logger instance
-func SetLog(l *log.Logger) {
-	if l == nil {
-		return
-	}
-	logger = l
 }
 
 // Init load the banner and prints it to output
@@ -82,5 +84,7 @@ func show(out io.Writer, content string) {
 		os.Getenv("GOPATH"),
 		runtime.GOROOT(),
 		runtime.Compiler,
+		ansiColor{},
+		ansiBackground{},
 	})
 }
