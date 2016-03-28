@@ -1,0 +1,4 @@
+package: github.com/dimiro1/banner
+import:
+- package: github.com/mattn/go-colorable
+- package: github.com/mattn/go-isatty
