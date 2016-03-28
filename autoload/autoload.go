@@ -11,6 +11,7 @@ import (
 	"os"
 
 	"github.com/dimiro1/banner"
+	"github.com/mattn/go-colorable"
 )
 
 func init() {
@@ -36,5 +37,5 @@ func init() {
 		return
 	}
 
-	banner.Init(os.Stdout, isEnabled, isColorEnabled, in)
+	banner.Init(colorable.NewColorableStdout(), isEnabled, isColorEnabled, in)
 }

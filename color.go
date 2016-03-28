@@ -4,7 +4,11 @@
 
 package banner
 
-import "runtime"
+import (
+	"os"
+
+	"github.com/mattn/go-isatty"
+)
 
 const (
 	encodeStart = "\033["
@@ -156,15 +160,19 @@ func (a ansiColor) BrightWhite() string {
 	return outputANSI(a.isColorEnabled, "97")
 }
 
+func (a ansiBackground) Reset() string {
+	return outputANSI(a.isColorEnabled, encodeReset)
+}
+
 func outputANSI(isColorEnabled bool, code string) string {
 	if isColorEnabled && isANSIEnabled() {
 		return encodeStart + code + encodeEnd
 	}
 
 	return ""
+
 }
 
 func isANSIEnabled() bool {
-	// Windows is always disabled.
-	return isTerminal() && (runtime.GOOS != "windows")
+	return isatty.IsTerminal(os.Stdout.Fd())
 }

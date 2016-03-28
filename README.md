@@ -41,7 +41,26 @@ func main() {
   isColorEnabled := true
   banner.Init(os.Stdout, isEnabled, isColorEnabled, bytes.NewBufferString("My Custom Banner"))
 }
+```
 
+If using windows, use go-colorable. This works in all-platforms.
+
+```go
+package main
+
+import (
+	"bytes"
+	"os"
+
+	"github.com/dimiro1/banner"
+	"github.com/mattn/go-colorable"
+)
+
+func main() {
+  isEnabled := true
+  isColorEnabled := true
+  banner.Init(colorable.NewColorableStdout(), isEnabled, isColorEnabled, bytes.NewBufferString("My Custom Banner"))
+}
 ```
 
 # API
