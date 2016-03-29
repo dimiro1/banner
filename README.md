@@ -6,6 +6,17 @@
 
 Add beautiful banners into your Go applications
 
+**Table of Contents**
+
+- [Motivation](#motivation)
+- [Usage](#usage)
+- [API](#api)
+- [Command line flags](#command-line-flags)
+- [Template](#template)
+- [Log](#log)
+- [ASCII Banners](#ascii-banners)
+- [LICENSE](#license)
+
 # Motivation
 
 I Like to add these startup banners on all my applications, I think it give personality to the application.
