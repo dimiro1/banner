@@ -2,6 +2,8 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/dimiro1/banner)](https://goreportcard.com/report/github.com/dimiro1/banner)
 [![GoDoc](https://godoc.org/github.com/dimiro1/banner?status.svg)](https://godoc.org/github.com/dimiro1/banner)
 
+Try browsing [the code on Sourcegraph](https://sourcegraph.com/github.com/dimiro1/banner)!
+
 # Banner
 
 Add beautiful banners into your Go applications
