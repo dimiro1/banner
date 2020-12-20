@@ -21,25 +21,21 @@ func init() {
 		isColorEnabled bool
 	)
 
-	flag.StringVar(&filename, "banner", "", "read from a txt file")
+	flag.StringVar(&filename, "banner", "banner.txt", "banner.txt file")
 	flag.BoolVar(&isEnabled, "show-banner", true, "print the banner?")
 	flag.BoolVar(&isColorEnabled, "ansi", true, "ansi colors enabled?")
 
 	flag.Parse()
 
-	if filename != "" {
-		in, err := os.Open(filename)
+	in, err := os.Open(filename)
 
-		if in != nil {
-			defer in.Close()
-		}
+	if in != nil {
+		defer in.Close()
+	}
 
-		if err != nil {
-			return
-		}
-
-		banner.Init(colorable.NewColorableStdout(), isEnabled, isColorEnabled, in)
+	if err != nil {
 		return
 	}
 
+	banner.Init(colorable.NewColorableStdout(), isEnabled, isColorEnabled, in)
 }
