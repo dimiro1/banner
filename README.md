@@ -134,6 +134,8 @@ See [examples/title](./examples/title) for an example
 {{ .Title "Banner" ""        4 }}
 ```
 
+The fonts available can be seen here [go-figure#supported-fonts](https://github.com/common-nighthawk/go-figure#supported-fonts)
+
 ## Colors
 
 There are support for ANSI colors :)
