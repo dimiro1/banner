@@ -122,7 +122,7 @@ Please see the layout of the function **.Now** in https://github.com/golang/go/b
 Title generates ascii art for you using [go-figure](https://github.com/common-nighthawk/go-figure)
 Use it if you don't provide your own ascii title.
 
-See [examples/string](./examples/string) for an example
+See [examples/title](./examples/title) for an example
 
 **Note:** Must provide zero values if not using something i.e.
 
@@ -178,7 +178,7 @@ There are support for ANSI colors :)
 Want to see a nyancat?
 
 ```sh
-$ go run example/main.go -banner example/nyancat.txt
+$ go run examples/file/main.go -banner examples/file/nyancat.txt
 ```
 
 ![NyanCat Banner](banner-nyan.png?raw=true "NyanCat Banner")

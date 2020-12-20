@@ -60,6 +60,7 @@ func (v vars) Title(title, font string, indentW int) string {
 	// 	fig = figure.NewColorFigure(title, font, color, true)
 	// }
 	// text := fig.ColorString()
+	// TODO(phanirithvij) figure out indetation https://stackoverflow.com/q/46066524/8608146
 	return indent(indentW, text)
 }
 
