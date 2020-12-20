@@ -13,6 +13,8 @@ import (
 	"runtime"
 	"testing"
 	"time"
+
+	"github.com/common-nighthawk/go-figure"
 )
 
 func Test_printBanner(t *testing.T) {
@@ -149,6 +151,18 @@ func Test_vars_Env(t *testing.T) {
 
 	if gopath != expected {
 		t.Errorf("gopath != expected, got %s", gopath)
+	}
+}
+
+func Test_vars_Title(t *testing.T) {
+	v := vars{}
+	ascii := v.Title("Banner", "", 0)
+
+	fig := figure.NewFigure("Banner", "", true)
+	expected := fig.String()
+
+	if ascii != expected {
+		t.Errorf("ascii != expected, got %s\n need\n %s\n", ascii, expected)
 	}
 }
 
