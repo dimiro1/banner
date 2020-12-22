@@ -5,13 +5,17 @@
 package banner
 
 import (
+	"bytes"
 	"io"
 	"io/ioutil"
 	"log"
 	"os"
 	"runtime"
+	"strings"
 	"text/template"
 	"time"
+
+	"github.com/common-nighthawk/go-figure"
 )
 
 var logger = log.New(os.Stderr, "", log.Ldate|log.Ltime|log.Lshortfile)
@@ -43,6 +47,33 @@ func (v vars) Env(env string) string {
 // See https://github.com/golang/go/blob/f06795d9b742cf3292a0f254646c23603fc6419b/src/time/format.go#L9-L41
 func (v vars) Now(layout string) string {
 	return time.Now().Format(layout)
+}
+
+// Create ASCII art from title
+func (v vars) Title(title, font string, indentW int) string {
+	// TODO(phanirithvij) variadic args
+	fig := figure.NewFigure(title, font, true)
+	text := fig.String()
+	// TODO(phanirithvij) Use ColorString as soon as PR
+	// https://github.com/common-nighthawk/go-figure/pull/16 lands
+	// if color != "" {
+	// 	fig = figure.NewColorFigure(title, font, color, true)
+	// }
+	// text := fig.ColorString()
+	// TODO(phanirithvij) figure out indetation https://stackoverflow.com/q/46066524/8608146
+	return indent(indentW, text)
+}
+
+// See https://github.com/Masterminds/sprig/blob/4241ae82dd07e5d3391a83c25b79c04450eb22b0/strings.go#L109
+func indent(spaces int, v string) string {
+	pad := strings.Repeat(" ", spaces)
+	return pad + strings.Replace(v, "\n", "\n"+pad, -1)
+}
+
+// InitString load the banner from a string and prints it to output
+// All errors are ignored, the application will not print the banner in case of error.
+func InitString(out io.Writer, isEnabled, isColorEnabled bool, templ string) {
+	Init(out, isEnabled, isColorEnabled, bytes.NewBufferString(templ))
 }
 
 // Init load the banner and prints it to output
